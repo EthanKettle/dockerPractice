@@ -1,0 +1,23 @@
+# node base Image
+FROM node:16.3.0
+
+# metadata info
+LABEL maintainer="Ethan Kettle <ethan.kettle1997@stu.mtec.edu>"
+LABEL discription="movie app"
+LABEL cohort="3001"
+LABEL animal="axolotl"
+
+# node application
+WORKDIR /Desktop/Movie-App/
+
+# Copy
+COPY . .
+
+#application
+EXPOSE 3001
+
+#run NPM
+RUN npm install
+
+#commands
+CMD ["npm","start"]

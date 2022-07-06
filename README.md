@@ -1,1 +1,2 @@
 # dockerPractice
+RUN npm install
